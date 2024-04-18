@@ -1,0 +1,172 @@
+CREATE TABLE ogrenci (
+    ogrenci_no INT PRIMARY KEY,
+    ad VARCHAR(50),
+    soyad VARCHAR(50),
+    eposta VARCHAR(100)
+);
+
+CREATE TABLE ders (
+    ders_kodu INT PRIMARY KEY,
+    ders_adi VARCHAR(100)
+);
+
+CREATE TABLE bolum (
+    bolum_no INT PRIMARY KEY,
+    bolum_adi VARCHAR(100)
+);
+
+CREATE TABLE akademisyen (
+    akademisyen_no INT PRIMARY KEY,
+    ad VARCHAR(50),
+    soyad VARCHAR(50),
+    eposta VARCHAR(100)
+);
+
+CREATE TABLE ogrenci_bolum (
+    ogrenci_no INT UNIQUE,
+    bolum_no INT,
+    PRIMARY KEY (ogrenci_no, bolum_no),
+    FOREIGN KEY (ogrenci_no) REFERENCES ogrenci(ogrenci_no),
+    FOREIGN KEY (bolum_no) REFERENCES bolum(bolum_no)
+);
+
+CREATE TABLE ogrenci_ders (
+    ogrenci_no INT,
+    ders_kodu INT,
+    PRIMARY KEY (ogrenci_no, ders_kodu),
+    FOREIGN KEY (ogrenci_no) REFERENCES ogrenci(ogrenci_no),
+    FOREIGN KEY (ders_kodu) REFERENCES ders(ders_kodu)
+);
+
+CREATE TABLE ogrenci_akademisyen (
+    ogrenci_no INT UNIQUE,
+    akademisyen_no INT,
+    PRIMARY KEY (ogrenci_no, akademisyen_no),
+    FOREIGN KEY (ogrenci_no) REFERENCES ogrenci(ogrenci_no),
+    FOREIGN KEY (akademisyen_no) REFERENCES akademisyen(akademisyen_no)
+);
+
+CREATE TABLE ders_akademisyen (
+    ders_kodu INT,
+    akademisyen_no INT UNIQUE,
+    PRIMARY KEY (ders_kodu, akademisyen_no),
+    FOREIGN KEY (ders_kodu) REFERENCES ders(ders_kodu),
+    FOREIGN KEY (akademisyen_no) REFERENCES akademisyen(akademisyen_no)
+);
+
+
+INSERT INTO ogrenci (ogrenci_no, ad, soyad, eposta) VALUES
+(101, 'Ahmet', 'Yılmaz', 'ahmet.yilmaz@example.com'),
+(102, 'Ayşe', 'Kaya', 'ayse.kaya@example.com'),
+(103, 'Mehmet', 'Demir', 'mehmet.demir@example.com'),
+(104, 'Fatma', 'Öztürk', 'fatma.ozturk@example.com'),
+(105, 'Mustafa', 'Koç', 'mustafa.koc@example.com'),
+(106, 'Zeynep', 'Şahin', 'zeynep.sahin@example.com'),
+(107, 'Ali', 'Çelik', 'ali.celik@example.com'),
+(108, 'Elif', 'Arslan', 'elif.arslan@example.com'),
+(109, 'Murat', 'Aydın', 'murat.aydin@example.com'),
+(110, 'Selin', 'Kurt', 'selin.kurt@example.com');
+
+
+INSERT INTO ders (ders_kodu, ders_adi) VALUES
+(201, 'Matematik'),
+(202, 'Fizik'),
+(203, 'Kimya'),
+(204, 'Biyoloji'),
+(205, 'Tarih'),
+(206, 'Coğrafya'),
+(207, 'İngilizce'),
+(208, 'Türkçe'),
+(209, 'Müzik'),
+(210, 'Beden Eğitimi');
+
+
+INSERT INTO bolum (bolum_no, bolum_adi) VALUES
+(301, 'Bilgisayar Mühendisliği'),
+(302, 'Makine Mühendisliği'),
+(303, 'Elektrik-Elektronik Mühendisliği'),
+(304, 'Endüstri Mühendisliği'),
+(305, 'Kimya Mühendisliği'),
+(306, 'İnşaat Mühendisliği'),
+(307, 'Mimarlık'),
+(308, 'Hukuk'),
+(309, 'İşletme'),
+(310, 'Psikoloji');
+
+
+INSERT INTO akademisyen (akademisyen_no, ad, soyad, eposta) VALUES
+(401, 'Prof. Dr. Ahmet', 'Yıldırım', 'ahmet.yildirim@example.com'),
+(402, 'Doç. Dr. Ayşe', 'Demir', 'ayse.demir@example.com'),
+(403, 'Dr. Mehmet', 'Kaya', 'mehmet.kaya@example.com'),
+(404, 'Yrd. Doç. Dr. Fatma', 'Özdemir', 'fatma.ozdemir@example.com'),
+(405, 'Prof. Dr. Mustafa', 'Arslan', 'mustafa.arslan@example.com'),
+(406, 'Doç. Dr. Zeynep', 'Çelik', 'zeynep.celik@example.com'),
+(407, 'Dr. Ali', 'Koç', 'ali.koc@example.com'),
+(408, 'Yrd. Doç. Dr. Elif', 'Şahin', 'elif.sahin@example.com'),
+(409, 'Prof. Dr. Murat', 'Yılmaz', 'murat.yilmaz@example.com'),
+(410, 'Doç. Dr. Selin', 'Aydın', 'selin.aydin@example.com');
+
+
+INSERT INTO ogrenci_bolum (ogrenci_no, bolum_no) VALUES
+(101, 301),
+(102, 302),
+(103, 303),
+(104, 304),
+(105, 305),
+(106, 306),
+(107, 307),
+(108, 308),
+(109, 309),
+(110, 310);
+
+
+INSERT INTO ogrenci_ders (ogrenci_no, ders_kodu) VALUES
+(101, 201),
+(101, 202),
+(101, 203),
+(101, 204),
+(101, 205),
+(102, 202),
+(102, 206),
+(102, 207),
+(102, 208),
+(103, 203),
+(103, 201),
+(103, 209),
+(104, 204),
+(104, 205),
+(104, 206),
+(104, 207),
+(105, 205),
+(106, 206),
+(107, 207),
+(108, 208),
+(109, 209),
+(110, 210);
+
+
+INSERT INTO ogrenci_akademisyen (ogrenci_no, akademisyen_no) VALUES
+(101, 401),
+(102, 402),
+(103, 403),
+(104, 404),
+(105, 405),
+(106, 406),
+(107, 407),
+(108, 408),
+(109, 409),
+(110, 410);
+
+
+INSERT INTO ders_akademisyen (ders_kodu, akademisyen_no) VALUES
+(201, 401),
+(202, 402),
+(203, 403),
+(204, 404),
+(205, 405),
+(206, 406),
+(207, 407),
+(208, 408),
+(209, 409),
+(210, 410);
+

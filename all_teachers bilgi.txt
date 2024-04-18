@@ -1,0 +1,25 @@
+HTML Bölümü:
+<!DOCTYPE html>: HTML belgesinin standartlarını belirtir.
+<html lang="en">: HTML belgesinin dilini belirtir.
+<head>: Sayfanın başlık ve meta bilgilerini içerir.
+<meta charset="UTF-8">: Karakter setini belirtir, genellikle UTF-8 kullanılır.
+<meta name="viewport" content="width=device-width, initial-scale=1.0">: Mobil cihazlarda sayfanın doğru şekilde ölçeklenmesini sağlar.
+<title>Akademisyen Listesi</title>: Sayfanın başlığını belirtir.
+<style>: Sayfanın CSS stillerini içerir.
+<body>: Sayfanın görsel içeriğini içerir.
+CSS Stilleri:
+body: Sayfanın genel görünümünü tanımlar.
+h2: Başlık etiketinin stili.
+table: Tablo stilini belirler.
+th, td: Tablo başlıkları ve hücreleri için stil.
+tr:hover: Fare hücrelerin üzerine gelindiğindeki renk değişimini belirler.
+.message: Mesaj bölümünün stili.
+PHP Bölümü:
+include "db_config.php";: Veritabanı yapılandırma dosyasını içeriye dahil eder.
+Veritabanı Bağlantısı ve Sorgu İşlemleri:
+$sql: Tüm akademisyenlerin seçilmesi için SQL sorgusunu oluşturur.
+$result = $conn->query($sql);: Sorguyu çalıştırır ve sonucu alır.
+if ($result->num_rows > 0) { ... } else { ... }: Sonuçlar varsa veya yoksa uygun mesajı görüntüler.
+while ($row = $result->fetch_assoc()) { ... }: Sonuçları döngü ile çeker ve tablo içerisine ekler.
+$conn->close();: Veritabanı bağlantısını kapatır.
+Bu kodlar, veritabanından akademisyen bilgilerini çeker ve bir HTML tablosu içinde görüntüler. Eğer veritabanında kayıt yoksa, "Kayıt bulunamadı." mesajını gösterir.

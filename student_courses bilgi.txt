@@ -1,0 +1,12 @@
+Başlık ve Stil Tanımları: Sayfanın başlığı belirlenir ve stil tanımları yapılır.
+Öğrenci Listesi Tablosu: PHP kodu tarafından veritabanından çekilecek öğrenci bilgilerini tablo halinde gösterecek bir yapı oluşturulur.
+Ders Listesi İçin Boş Bir Div: Öğrencinin seçildiğinde bu bölüm, öğrencinin aldığı dersleri gösterecek.
+PHP Bölümü:
+Veritabanı Bağlantısı ve Sorgu: db_config.php dosyası aracılığıyla veritabanına bağlanılır ve öğrenci bilgilerini içeren bir SQL sorgusu çalıştırılır.
+Öğrenci Bilgilerinin Listelenmesi: Veritabanından alınan öğrenci bilgileri tablo halinde gösterilir. Her öğrenci için bir satır oluşturulur ve her sütunda öğrenci bilgileri yer alır. Ayrıca her öğrenci için bir buton eklenir. Bu buton, öğrencinin derslerini görmek için bir JavaScript fonksiyonunu çağırır.
+Veritabanı Bağlantısının Kapatılması: Veritabanı bağlantısı kapatılır.
+JavaScript Bölümü:
+Ders Listesini Alma Fonksiyonu: listCourses fonksiyonu, belirli bir öğrencinin aldığı dersleri almak için AJAX kullanır. Öğrenci ID'si parametre olarak alınır.
+AJAX İsteği Gönderme: XMLHttpRequest nesnesi oluşturulur ve belirtilen URL'ye (get_courses.php) öğrenci ID'sini ekleyerek bir GET isteği gönderilir.
+Yanıtın İşlenmesi: İstek tamamlandığında, gelen ders verileri, bir div içine (courseList id'li div) yerleştirilir ve bu şekilde sayfada görüntülenir.
+Bu kodlar, bir öğrencinin derslerini göstermek için bir web arayüzü sağlar. Öğrenci bilgileri ve ders verileri, bir veritabanından çekilir ve dinamik olarak HTML içeriğine yerleştirilir.

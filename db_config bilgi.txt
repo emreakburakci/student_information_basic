@@ -1,0 +1,4 @@
+$servername, $username, $password, ve $dbname değişkenleri, MySQL veritabanına bağlanmak için gerekli olan sunucu adı, kullanıcı adı, şifre ve veritabanı adı bilgilerini içerir. Bu bilgiler, kendi sunucunuzdaki MySQL kurulumuna göre değişebilir.
+new mysqli() yöntemi, MySQL sunucusuna bir bağlantı oluşturur. Bu yöntem, dört parametre alır: sunucu adı, kullanıcı adı, şifre ve veritabanı adı. Bu parametrelerle birlikte bir mysqli nesnesi oluşturulur ve bu nesne, $conn değişkenine atanır. Bağlantı, $conn üzerinden gerçekleştirilecek diğer MySQL işlemleri için kullanılacaktır.
+connect_error özelliği, bağlantı hatası oluştuğunda bir hata mesajı döndürür. Bağlantı başarısız olduğunda, die() işlevi kullanılarak bir hata mesajıyla birlikte işlem sonlandırılır.
+Bu kod, MySQL veritabanına bağlanmayı sağlar ve bağlantının başarılı olup olmadığını kontrol eder. Bağlantı başarılıysa, $conn değişkeni üzerinden veritabanı işlemleri gerçekleştirilebilir.

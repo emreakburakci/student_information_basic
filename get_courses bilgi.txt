@@ -1,0 +1,6 @@
+HTML Başlangıcı: HTML belgesi başlatılır. Meta etiketleri belirlenir ve başlık (title) tanımlanır.
+CSS Tanımları: Sayfanın stilini belirlemek için CSS kullanılır. Örneğin, font, renkler, tablo düzenlemeleri gibi özellikler burada tanımlanır.
+PHP Kodu: <?php ile başlayan bölüm PHP kodunu içerir. Bu kod, öğrencinin aldığı dersleri veritabanından alıp tablo şeklinde görüntüler. Ayrıca, veritabanı bağlantısı başlatılır, gerekli sorgu çalıştırılır, sonuçlar işlenir ve tablo olarak HTML'e dönüştürülür. Eğer öğrencinin dersi yoksa uygun bir mesaj görüntülenir.
+Tablo Oluşturma: Eğer öğrencinin aldığı dersler varsa, bu dersler bir HTML tablosu içinde listelenir. Tablo başlıkları "Ders Kodu" ve "Ders Adı"dır. Her bir satırda, dersin kodu ve adı gösterilir.
+Veritabanı Bağlantısının Kapatılması: İşlem tamamlandıktan sonra veritabanı bağlantısı kapatılır.
+Bu kodların çalışması için bir veritabanı gereklidir ve db_config.php dosyasında bu veritabanıyla ilgili yapılandırma bilgileri (sunucu adı, kullanıcı adı, şifre, vb.) bulunmalıdır. Ayrıca, bu sayfa student_id parametresini URL'den alır, bu nedenle sayfaya erişirken bir öğrenci ID'si sağlanmalıdır.

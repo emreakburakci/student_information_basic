@@ -1,0 +1,18 @@
+HTML Başlangıç Etiketleri:
+<!DOCTYPE html>: HTML dokümanının tipini belirtir.
+<html lang="en">: HTML dokümanının dilini belirtir.
+Head Bölümü:
+Meta etiketleri: Dokümanın karakter setini ve cihaz uyumluluğunu belirler.
+Başlık (<title>): Sayfanın başlığını belirler.
+CSS stil bilgileri: Sayfanın görünümünü belirleyen CSS kuralları.
+Body Bölümü:
+PHP kodu: Sayfanın içeriğini oluşturan dinamik PHP kodu burada bulunur.
+include "db_config.php";: Veritabanı bağlantı bilgilerini içeren db_config.php dosyasını dahil eder.
+$sql = "SELECT * FROM ogrenci";: ogrenci adlı tablodan tüm sütunları seçen bir SQL sorgusu hazırlar.
+$result = $conn->query($sql);: SQL sorgusunu yürütür ve sonucu $result değişkenine atar.
+if ($result->num_rows > 0) { ... } else { ... }: Sorgu sonucunda veri varsa öğrenci bilgilerini tablo içinde listeler, aksi halde bir mesaj gösterir.
+while ($row = $result->fetch_assoc()) { ... }: Sonuç kümesindeki her satır için bir döngü oluşturur ve her bir öğrencinin bilgilerini bir HTML tablo satırı olarak yazdırır.
+$conn->close();: Veritabanı bağlantısını kapatır.
+CSS Stilleri:
+body, h2, table, th, td, .message: Sayfanın stilini belirler.
+Bu kod, bir web sayfası oluşturarak bir MySQL veritabanından öğrenci bilgilerini çekip listeler. Veritabanı bağlantı bilgileri db_config.php dosyasından alınır ve her bir öğrenci için bir satır oluşturmak için PHP kullanılır. Sayfa, HTML ve CSS kullanılarak stilize edilir.

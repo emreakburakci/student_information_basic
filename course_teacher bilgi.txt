@@ -1,0 +1,10 @@
+HTML Başlangıç Etiketleri: Temel HTML yapısını oluşturur.
+CSS Stilleri: Sayfanın görünümünü belirlemek için CSS kullanır. Örneğin, font, arka plan rengi ve tablo stilini ayarlar.
+PHP Kodları:
+Veritabanı Bağlantısı ve Sorgu: "db_config.php" dosyası dahil edilerek veritabanına bağlanılır. Ardından derslerin ve akademisyenlerin bilgilerini içeren bir SQL sorgusu oluşturulur.
+SQL Sorgusunun Yürütülmesi: Oluşturulan SQL sorgusu veritabanında çalıştırılır ve sonuçlar "$result" değişkeninde saklanır.
+Sonuçların İşlenmesi: Eğer sorgu sonucunda herhangi bir veri bulunmuşsa, bu veriler tablo içinde gösterilir. Eğer veri bulunamazsa, bir mesaj görüntülenir.
+Tablo Oluşturma: Eğer sorgu sonucunda veri bulunmuşsa, bir tablo oluşturulur ve her bir satırda ders kodu, ders adı, akademisyen adı ve akademisyen soyadı bilgileri gösterilir.
+Tablo Olmadığında Mesaj Görüntüleme: Eğer veri bulunamazsa, "Tabloda veri bulunamadı." şeklinde bir mesaj görüntülenir.
+Veritabanı Bağlantısının Kapatılması: Veritabanı bağlantısı kapatılır.
+Bu kodlar, bir veritabanından bilgi çekip, bu bilgileri bir web sayfasında tablo halinde göstermek için kullanılabilir.

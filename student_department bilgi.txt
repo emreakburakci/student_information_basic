@@ -1,0 +1,31 @@
+HTML Yapısı:
+<!DOCTYPE html>: HTML belgesinin tipini tanımlar.
+<html lang="en">: HTML belgesinin dilini belirtir.
+<head>: HTML belgesinin başlık bölümünü tanımlar.
+<meta charset="UTF-8">: Karakter kodlamasını belirtir.
+<meta name="viewport" content="width=device-width, initial-scale=1.0">: Sayfanın cihaz ekranına uyumunu sağlar.
+<title>Öğrenci Bilgileri</title>: Sayfa başlığını belirtir.
+<style>: CSS stillerini içeren bölüm.
+CSS Stilleri:
+body: Sayfa genelindeki metin ve arka plan stillerini tanımlar.
+h2: Başlık 2 etiketlerini (h2) ortalar.
+table: Tablo stillerini belirler.
+th, td: Tablo başlıkları ve hücrelerin stillerini belirler.
+.message: Mesajları ortalar.
+PHP Kodları:
+include "db_config.php";: Veritabanı bağlantı ayarlarını içeren dosyayı dahil eder.
+SQL sorgusu:
+SELECT kullanarak öğrenci numarası, ad, soyad ve bölüm adı gibi bilgileri alır.
+INNER JOIN kullanarak ilişkili tablolar arasında birleştirme yapar.
+$result = $conn->query($sql);: SQL sorgusunu çalıştırır ve sonucu $result değişkenine atar.
+Sonuçları işler:
+Eğer sonuçlar varsa, bir tablo oluşturur ve öğrenci bilgilerini tablo içine yerleştirir.
+Eğer sonuçlar yoksa, bir mesaj gösterir.
+Veritabanı bağlantısını kapatır: $conn->close();.
+Bu kodlar bir web sayfası oluşturarak, bir MySQL veritabanından öğrenci bilgilerini çeker ve bu bilgileri bir HTML tablosunda görüntüler.
+
+
+
+
+
+

@@ -1,0 +1,1 @@
+Uygulamayı çalıştırmadan önce MySQL veritabanında odev isminde bir schema oluşturduktan sonra sql.txt adlı dosyadaki SQL kodlarını çalıştırarak tabloların oluşturulmasını ve tablo verilerinin insert edilmesini gerçekleştirmeniz gerekiyor.

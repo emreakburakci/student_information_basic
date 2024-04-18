@@ -1,0 +1,23 @@
+HTML Başlangıcı:
+<!DOCTYPE html>: HTML belgesinin tipini belirtir.
+<html lang="en">: HTML belgesinin başlangıcını işaret eder ve dilini İngilizce olarak belirtir.
+Başlık ve Stil Tanımları:
+<head>: Belgenin başlık ve stil bilgilerini içerir.
+<meta charset="UTF-8">: Karakter kodlamasını UTF-8 olarak belirtir.
+<meta name="viewport" content="width=device-width, initial-scale=1.0">: Cihaz genişliğine göre görüntüleme ve başlangıç ölçeğini ayarlar.
+<title>Tüm Dersler</title>: Sayfanın başlığını belirler.
+<style>: CSS stil tanımlamalarını içerir.
+CSS Stilleri:
+body: Sayfa genelindeki biçimlendirme stilini belirtir.
+h2: Başlık 2 (h2) elementlerini merkeze hizalar.
+table: Tablo stilini belirtir.
+th, td: Tablo başlığı ve hücreleri için stil tanımları.
+.message: Mesajları göstermek için kullanılan stil tanımı.
+PHP Kodu:
+<body> içerisinde PHP kodu başlar.
+include "db_config.php";: Veritabanı bağlantı ayarlarını içeren bir dosyayı ekler.
+Veritabanından derslerin kodu ve adını seçmek için SQL sorgusu hazırlanır ve çalıştırılır.
+Sonuçlar kontrol edilir:
+Eğer sonuçlar varsa, bir tablo oluşturulur ve ders kodu ve adları satır satır doldurulur.
+Eğer sonuç yoksa, "Hiç ders bulunamadı." mesajı gösterilir.
+Veritabanı bağlantısı kapatılır.
